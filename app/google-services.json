@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "793039034089",
+    "firebase_url": "https://exmoproject-1cfad.firebaseio.com",
+    "project_id": "exmoproject-1cfad",
+    "storage_bucket": "exmoproject-1cfad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:793039034089:android:4bae7c08beb1062a",
+        "android_client_info": {
+          "package_name": "com.mannydev.exmohelper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "793039034089-a9d4e6hh8o9pb60nqeimb1huu7p7prtb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYx7ZPnRvtgHTvhYhrLxkwJqZIVO3RNUM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
