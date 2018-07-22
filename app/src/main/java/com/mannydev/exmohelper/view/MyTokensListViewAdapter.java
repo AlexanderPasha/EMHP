@@ -174,6 +174,25 @@ public class MyTokensListViewAdapter extends BaseAdapter {
             usd = Double.parseDouble(exmo.getEOSUSD().getBuyPrice())*token.getBallance();
             txtProfit.setText(calcProfit(Double.parseDouble(exmo.getEOSUSD().getBuyPrice()),token.getPrice()));
         }
+        if(token.getName().equals("XLM")){
+            usd = Double.parseDouble(exmo.getxLMUSD().getBuyPrice())*token.getBallance();
+            txtProfit.setText(calcProfit(Double.parseDouble(exmo.getxLMUSD().getBuyPrice()),token.getPrice()));
+        }
+        if(token.getName().equals("BTCZ")){
+            double btc = Double.parseDouble(exmo.getbTCZBTC().getBuyPrice())*token.getBallance();
+            usd = btc*Double.parseDouble(exmo.getBTCUSD().getAvg());
+            double usdPrice = Double.parseDouble(exmo.getbTCZBTC().getAvg())*Double.parseDouble(exmo.getBTCUSD().getAvg());
+            txtProfit.setText(calcProfit(usdPrice,token.getPrice()));
+        }
+        if(token.getName().equals("DXT")){
+            usd = Double.parseDouble(exmo.getdXTUSD().getBuyPrice())*token.getBallance();
+            txtProfit.setText(calcProfit(Double.parseDouble(exmo.getdXTUSD().getBuyPrice()),token.getPrice()));
+        }
+        if(token.getName().equals("STQ")){
+            usd = Double.parseDouble(exmo.getsTQUSD().getBuyPrice())*token.getBallance();
+            txtProfit.setText(calcProfit(Double.parseDouble(exmo.getsTQUSD().getBuyPrice()),token.getPrice()));
+        }
+
 
         txtUsd.setText(roundResult(usd));
         return view;
