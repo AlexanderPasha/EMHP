@@ -106,7 +106,7 @@ public class CoinViewAdapter extends RecyclerView.Adapter<MyViewHolder> {
         Coin coin = list.get(position);
         if(coin.getName().equals("BTC")){
             return BITCOIN;
-        }else if (coin.getName().equals("LTC")||coin.getName().equals("ZEC")){
+        }else if (coin.getName().equals("LTC")||coin.getName().equals("ZEC")||coin.getName().equals("STQ")){
             return LITECOIN;
         }else if (coin.getName().equals("ETH")){
             return ETHERIUM;
@@ -135,7 +135,7 @@ public class CoinViewAdapter extends RecyclerView.Adapter<MyViewHolder> {
         else if (coin.getName().equals("HBZ")){
             return HBZ;
         }
-        else if (coin.getName().equals("EOS")){
+        else if (coin.getName().equals("EOS")||coin.getName().equals("DXT")){
             return EOS;
         }
         return ALTCOIN;

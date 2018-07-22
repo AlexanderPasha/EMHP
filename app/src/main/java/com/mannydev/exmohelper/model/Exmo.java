@@ -20,6 +20,8 @@ import com.mannydev.exmohelper.model.pairs.DASHBTC;
 import com.mannydev.exmohelper.model.pairs.DASHRUB;
 import com.mannydev.exmohelper.model.pairs.DASHUSD;
 import com.mannydev.exmohelper.model.pairs.DOGEBTC;
+import com.mannydev.exmohelper.model.pairs.DXTBTC;
+import com.mannydev.exmohelper.model.pairs.DXTUSD;
 import com.mannydev.exmohelper.model.pairs.ETCBTC;
 import com.mannydev.exmohelper.model.pairs.ETCRUB;
 import com.mannydev.exmohelper.model.pairs.ETCUSD;
@@ -37,6 +39,10 @@ import com.mannydev.exmohelper.model.pairs.LTCBTC;
 import com.mannydev.exmohelper.model.pairs.LTCEUR;
 import com.mannydev.exmohelper.model.pairs.LTCRUB;
 import com.mannydev.exmohelper.model.pairs.LTCUSD;
+import com.mannydev.exmohelper.model.pairs.STQBTC;
+import com.mannydev.exmohelper.model.pairs.STQEUR;
+import com.mannydev.exmohelper.model.pairs.STQRUB;
+import com.mannydev.exmohelper.model.pairs.STQUSD;
 import com.mannydev.exmohelper.model.pairs.USDRUB;
 import com.mannydev.exmohelper.model.pairs.USDTRUB;
 import com.mannydev.exmohelper.model.pairs.USDTUSD;
@@ -232,6 +238,24 @@ public class Exmo extends Observable {
     @SerializedName("BTCZ_BTC")
     @Expose
     private BTCZBTC bTCZBTC;
+    @SerializedName("DXT_BTC")
+    @Expose
+    private DXTBTC dXTBTC;
+    @SerializedName("DXT_USD")
+    @Expose
+    private DXTUSD dXTUSD;
+    @SerializedName("STQ_BTC")
+    @Expose
+    private STQBTC sTQBTC;
+    @SerializedName("STQ_USD")
+    @Expose
+    private STQUSD sTQUSD;
+    @SerializedName("STQ_EUR")
+    @Expose
+    private STQEUR sTQEUR;
+    @SerializedName("STQ_RUB")
+    @Expose
+    private STQRUB sTQRUB;
 
     private void initPairs() {
         this.bTCUSD = (BTCUSD) new Pair();
@@ -372,6 +396,16 @@ public class Exmo extends Observable {
             this.xLMUSD = newExmo.getxLMUSD();
             this.xLMRUB = newExmo.getxLMRUB();
             this.bTCZBTC = newExmo.getbTCZBTC();
+
+            this.dXTBTC = newExmo.getdXTBTC();
+            this.dXTUSD = newExmo.getdXTUSD();
+
+            this.sTQBTC = newExmo.getsTQBTC();
+            this.sTQUSD = newExmo.getsTQUSD();
+            this.sTQEUR = newExmo.getsTQEUR();
+            this.sTQRUB = newExmo.getsTQRUB();
+
+
 
             ratesChanged();
         }
@@ -816,5 +850,53 @@ public class Exmo extends Observable {
 
     public void setbTCZBTC(BTCZBTC bTCZBTC) {
         this.bTCZBTC = bTCZBTC;
+    }
+
+    public DXTBTC getdXTBTC() {
+        return dXTBTC;
+    }
+
+    public void setdXTBTC(DXTBTC dXTBTC) {
+        this.dXTBTC = dXTBTC;
+    }
+
+    public DXTUSD getdXTUSD() {
+        return dXTUSD;
+    }
+
+    public void setdXTUSD(DXTUSD dXTUSD) {
+        this.dXTUSD = dXTUSD;
+    }
+
+    public STQBTC getsTQBTC() {
+        return sTQBTC;
+    }
+
+    public void setsTQBTC(STQBTC sTQBTC) {
+        this.sTQBTC = sTQBTC;
+    }
+
+    public STQUSD getsTQUSD() {
+        return sTQUSD;
+    }
+
+    public void setsTQUSD(STQUSD sTQUSD) {
+        this.sTQUSD = sTQUSD;
+    }
+
+    public STQEUR getsTQEUR() {
+        return sTQEUR;
+    }
+
+    public void setsTQEUR(STQEUR sTQEUR) {
+        this.sTQEUR = sTQEUR;
+    }
+
+    public STQRUB getsTQRUB() {
+        return sTQRUB;
+    }
+
+    public void setsTQRUB(STQRUB sTQRUB) {
+        this.sTQRUB = sTQRUB;
     }
 }

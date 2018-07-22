@@ -9,8 +9,8 @@ public class Datawallet extends Coin {
     private static final String USD = "USD";
     private static final String BTC = "BTC";
 
-    public Datawallet(Pair hbzBtc, Pair hbzUsd, Pair btcUsd) {
-        super("DXT",hbzBtc,hbzUsd,null,null,null,null,null,null,null,null,null,btcUsd,null,null,null,null);
+    public Datawallet(Pair dxtBtc, Pair dxtUsd, Pair btcUsd) {
+        super("DXT",dxtBtc,dxtUsd,null,null,null,null,null,null,null,null,null,btcUsd,null,null,null,null);
         rightNowBuyProfit = getRightNowBuyUsdProfit();
         rightNowSellProfit = getRightNowSellUsdProfit();
     }

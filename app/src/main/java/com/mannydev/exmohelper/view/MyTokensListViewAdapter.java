@@ -46,6 +46,11 @@ public class MyTokensListViewAdapter extends BaseAdapter {
         coinsLogos.put("XMR","https://s2.coinmarketcap.com/static/img/coins/32x32/328.png");
         coinsLogos.put("HBZ","https://s2.coinmarketcap.com/static/img/coins/32x32/2680.png");
         coinsLogos.put("EOS","https://s2.coinmarketcap.com/static/img/coins/32x32/1765.png");
+        coinsLogos.put("XLM","https://s2.coinmarketcap.com/static/img/coins/32x32/512.png");
+        coinsLogos.put("BTCZ","https://s2.coinmarketcap.com/static/img/coins/32x32/2041.png");
+        coinsLogos.put("DXT","https://s2.coinmarketcap.com/static/img/coins/32x32/2510.png");
+        coinsLogos.put("STQ","https://s2.coinmarketcap.com/static/img/coins/32x32/2541.png");
+
     }
 
     @Override
