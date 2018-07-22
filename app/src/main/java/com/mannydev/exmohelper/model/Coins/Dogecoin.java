@@ -11,7 +11,7 @@ import static com.mannydev.exmohelper.MainActivity.exmo;
 
 public class Dogecoin extends Coin {
     public Dogecoin(Pair dogeBtc) {
-        super("DOGE",exmo.getDOGEBTC(),null,null,null,null,null,null,null,null,null,null,null,null,null,null,null);
+        super("DOGE",dogeBtc,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null);
     }
 
     @Override

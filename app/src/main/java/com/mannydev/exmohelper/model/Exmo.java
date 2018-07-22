@@ -15,6 +15,7 @@ import com.mannydev.exmohelper.model.pairs.BTCRUB;
 import com.mannydev.exmohelper.model.pairs.BTCUAH;
 import com.mannydev.exmohelper.model.pairs.BTCUSD;
 import com.mannydev.exmohelper.model.pairs.BTCUSDT;
+import com.mannydev.exmohelper.model.pairs.BTCZBTC;
 import com.mannydev.exmohelper.model.pairs.DASHBTC;
 import com.mannydev.exmohelper.model.pairs.DASHRUB;
 import com.mannydev.exmohelper.model.pairs.DASHUSD;
@@ -228,6 +229,9 @@ public class Exmo extends Observable {
     @SerializedName("XLM_RUB")
     @Expose
     private XLMRUB xLMRUB;
+    @SerializedName("BTCZ_BTC")
+    @Expose
+    private BTCZBTC bTCZBTC;
 
     private void initPairs() {
         this.bTCUSD = (BTCUSD) new Pair();
@@ -285,6 +289,8 @@ public class Exmo extends Observable {
         this.xLMBTC = (XLMBTC) new Pair();
         this.xLMUSD = (XLMUSD) new Pair();
         this.xLMRUB = (XLMRUB) new Pair();
+        this.bTCZBTC = (BTCZBTC) new Pair();
+
     }
 
     private Exmo() {
@@ -365,6 +371,7 @@ public class Exmo extends Observable {
             this.xLMBTC = newExmo.getxLMBTC();
             this.xLMUSD = newExmo.getxLMUSD();
             this.xLMRUB = newExmo.getxLMRUB();
+            this.bTCZBTC = newExmo.getbTCZBTC();
 
             ratesChanged();
         }
@@ -801,5 +808,13 @@ public class Exmo extends Observable {
 
     public void setxLMRUB(XLMRUB xLMRUB) {
         this.xLMRUB = xLMRUB;
+    }
+
+    public BTCZBTC getbTCZBTC() {
+        return bTCZBTC;
+    }
+
+    public void setbTCZBTC(BTCZBTC bTCZBTC) {
+        this.bTCZBTC = bTCZBTC;
     }
 }

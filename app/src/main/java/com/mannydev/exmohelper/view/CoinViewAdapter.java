@@ -129,7 +129,7 @@ public class CoinViewAdapter extends RecyclerView.Adapter<MyViewHolder> {
         else if (coin.getName().equals("KICK")){
             return KICK;
         }
-        else if (coin.getName().equals("DOGE")){
+        else if (coin.getName().equals("DOGE")||coin.getName().equals("BTCZ")){
             return DOGE;
         }
         else if (coin.getName().equals("HBZ")){

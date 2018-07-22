@@ -10,8 +10,8 @@ import static com.mannydev.exmohelper.MainActivity.exmo;
  */
 
 public class BitcoinZ extends Coin {
-    public BitcoinZ(Pair dogeBtc) {
-        super("BTCZ",exmo.getDOGEBTC(),null,null,null,null,null,null,null,null,null,null,null,null,null,null,null);
+    public BitcoinZ(Pair btczBtc) {
+        super("BTCZ",btczBtc,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null);
     }
 
     @Override
