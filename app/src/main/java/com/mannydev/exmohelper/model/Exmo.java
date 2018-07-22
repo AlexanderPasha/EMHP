@@ -41,6 +41,9 @@ import com.mannydev.exmohelper.model.pairs.USDTRUB;
 import com.mannydev.exmohelper.model.pairs.USDTUSD;
 import com.mannydev.exmohelper.model.pairs.WAVESBTC;
 import com.mannydev.exmohelper.model.pairs.WAVESRUB;
+import com.mannydev.exmohelper.model.pairs.XLMBTC;
+import com.mannydev.exmohelper.model.pairs.XLMRUB;
+import com.mannydev.exmohelper.model.pairs.XLMUSD;
 import com.mannydev.exmohelper.model.pairs.XMRBTC;
 import com.mannydev.exmohelper.model.pairs.XMREUR;
 import com.mannydev.exmohelper.model.pairs.XMRUSD;
@@ -216,6 +219,15 @@ public class Exmo extends Observable {
     @SerializedName("EOS_BTC")
     @Expose
     private EOSBTC eOSBTC;
+    @SerializedName("XLM_BTC")
+    @Expose
+    private XLMBTC xLMBTC;
+    @SerializedName("XLM_USD")
+    @Expose
+    private XLMUSD xLMUSD;
+    @SerializedName("XLM_RUB")
+    @Expose
+    private XLMRUB xLMRUB;
 
     private void initPairs() {
         this.bTCUSD = (BTCUSD) new Pair();
@@ -269,6 +281,10 @@ public class Exmo extends Observable {
         this.hBZETH = (HBZETH) new Pair();
         this.eOSUSD = (EOSUSD) new Pair();
         this.eOSBTC = (EOSBTC) new Pair();
+
+        this.xLMBTC = (XLMBTC) new Pair();
+        this.xLMUSD = (XLMUSD) new Pair();
+        this.xLMRUB = (XLMRUB) new Pair();
     }
 
     private Exmo() {
@@ -345,6 +361,10 @@ public class Exmo extends Observable {
             this.hBZETH = newExmo.getHBZETH();
             this.eOSUSD = newExmo.getEOSUSD();
             this.eOSBTC = newExmo.getEOSBTC();
+
+            this.xLMBTC = newExmo.getxLMBTC();
+            this.xLMUSD = newExmo.getxLMUSD();
+            this.xLMRUB = newExmo.getxLMRUB();
 
             ratesChanged();
         }
@@ -759,4 +779,27 @@ public class Exmo extends Observable {
         this.kICKETH = kICKETH;
     }
 
+    public XLMBTC getxLMBTC() {
+        return xLMBTC;
+    }
+
+    public void setxLMBTC(XLMBTC xLMBTC) {
+        this.xLMBTC = xLMBTC;
+    }
+
+    public XLMUSD getxLMUSD() {
+        return xLMUSD;
+    }
+
+    public void setxLMUSD(XLMUSD xLMUSD) {
+        this.xLMUSD = xLMUSD;
+    }
+
+    public XLMRUB getxLMRUB() {
+        return xLMRUB;
+    }
+
+    public void setxLMRUB(XLMRUB xLMRUB) {
+        this.xLMRUB = xLMRUB;
+    }
 }

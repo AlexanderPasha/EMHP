@@ -111,7 +111,7 @@ public class CoinViewAdapter extends RecyclerView.Adapter<MyViewHolder> {
         }else if (coin.getName().equals("ETH")){
             return ETHERIUM;
         }
-        else if (coin.getName().equals("DASH")||coin.getName().equals("XRP")||coin.getName().equals("ETC")){
+        else if (coin.getName().equals("DASH")||coin.getName().equals("XRP")||coin.getName().equals("ETC")||coin.getName().equals("XLM")){
             return DASH;
         }
         else if (coin.getName().equals("BCH")){

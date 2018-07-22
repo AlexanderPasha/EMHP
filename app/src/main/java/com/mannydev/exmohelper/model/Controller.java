@@ -12,6 +12,7 @@ import com.mannydev.exmohelper.model.Coins.KickCoin;
 import com.mannydev.exmohelper.model.Coins.Litecoin;
 import com.mannydev.exmohelper.model.Coins.Monero;
 import com.mannydev.exmohelper.model.Coins.Ripple;
+import com.mannydev.exmohelper.model.Coins.Stellar;
 import com.mannydev.exmohelper.model.Coins.UsdtCoin;
 import com.mannydev.exmohelper.model.Coins.Waves;
 import com.mannydev.exmohelper.model.Coins.ZecCoin;
@@ -29,7 +30,7 @@ public class Controller implements Observer {
     ArrayList<Coin> coins;
 
 
-    private Coin btc,ltc,doge,dash,eth,waves,zec,usdt,xmr,xrp,kick,etc,bch,hbz,eos;
+    private Coin btc,ltc,doge,dash,eth,waves,zec,usdt,xmr,xrp,kick,etc,bch,hbz,eos,xlm;
 
     public Controller(Observable observable) {
         this.observable = observable;
@@ -62,6 +63,8 @@ public class Controller implements Observer {
         this.doge = new Dogecoin(exmo.getDOGEBTC());
         this.hbz = new Helbiz(exmo.getHBZBTC(),exmo.getHBZUSD(),exmo.getHBZETH(),exmo.getBTCUSD(),exmo.getETHUSD());
         this.eos = new Eos(exmo.getEOSBTC(),exmo.getEOSUSD(),exmo.getBTCUSD());
+        this.xlm = new Stellar(exmo.getxLMBTC(),exmo.getxLMUSD(),exmo.getxLMRUB(),exmo.getUSDRUB(),exmo.getBTCUSD());
+
 
 
         addCoinsToList();
@@ -85,6 +88,7 @@ public class Controller implements Observer {
         coins.add(doge);
         coins.add(hbz);
         coins.add(eos);
+        coins.add(xlm);
 
     }
 
